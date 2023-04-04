@@ -1,0 +1,15 @@
+pkgbase = terraform-variables-generator-git
+	pkgdesc = Simple Tool to Generate Variables file from Terraform Configuration (git)
+	pkgver = r32.5d9b7cc
+	pkgrel = 1
+	url = https://github.com/alexandrst88/terraform-variables-generator
+	arch = x86_64
+	license = unknown
+	makedepends = git
+	makedepends = go
+	provides = terraform-variables-generator
+	conflicts = terraform-variables-generator
+	source = git+https://github.com/alexandrst88/terraform-variables-generator
+	sha256sums = SKIP
+
+pkgname = terraform-variables-generator-git

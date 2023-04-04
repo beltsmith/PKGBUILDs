@@ -1,0 +1,32 @@
+# Maintainer:  <belt@cheyenne-mtn>
+pkgname='terraform-variables-generator-git'
+pkgver=r32.5d9b7cc
+pkgrel=1
+pkgdesc="Simple Tool to Generate Variables file from Terraform Configuration (git)"
+arch=('x86_64')
+url="https://github.com/alexandrst88/terraform-variables-generator"
+license=('unknown')
+
+makedepends=('git' 'go')
+
+conflicts=("${pkgname%-git}")
+provides=("${pkgname%-git}")
+
+source=("git+${url}")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd "${pkgname%-git}"
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+build() {
+  cd "${pkgname%-git}"
+  go build .
+}
+
+package() {
+  cd "${pkgname%-git}"
+
+  install -Dm 755 terraform-variables-generator "$pkgdir/usr/bin/terraform-variables-generator"
+}
