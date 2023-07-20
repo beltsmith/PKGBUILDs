@@ -1,0 +1,11 @@
+pkgbase = wowsimcli
+	pkgdesc = Command line tool to run WOTLK simulations
+	pkgver = 0.1.38
+	pkgrel = 1
+	url = https://github.com/wowsims/wotlk
+	arch = x86_64
+	license = MIT
+	source = wowsimcli-0.1.38::https://github.com/wowsims/wotlk/releases/download/v0.1.38/wowsimcli-amd64-linux.zip
+	sha256sums = ece4e9b85703a644a0430e88e04475cd628d9347b03f6b25afbf5cde42df21e7
+
+pkgname = wowsimcli

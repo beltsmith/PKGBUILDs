@@ -1,0 +1,16 @@
+# Maintainer:  <belt@cheyenne-mtn>
+pkgname=wowsimcli
+pkgver=0.1.38
+pkgrel=1
+pkgdesc="Command line tool to run WOTLK simulations"
+arch=('x86_64')
+url="https://github.com/wowsims/wotlk"
+license=('MIT')
+source=("$pkgname-$pkgver::$url/releases/download/v$pkgver/$pkgname-amd64-linux.zip")
+sha256sums=('ece4e9b85703a644a0430e88e04475cd628d9347b03f6b25afbf5cde42df21e7')
+
+package() {
+  install -Dm 755 "$pkgname-amd64-linux" "$pkgdir/usr/bin/$pkgname"
+}
+
+# vim:set ts=2 sw=2 et:
